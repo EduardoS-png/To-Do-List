@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Creepster", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../assets/images/aboboras.jpg');
+    background-size: cover;     
+    background-repeat: no-repeat;  
+    background-position: center;
+}
+
+.container {
+    background-color: rgb(13, 13, 13);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 5px solid rgb(255, 117, 24);
+    border-radius: 5px;
+    margin: 50px;
+    padding: 50px;
+    height: 40%;
+    width: 40%;
+}
+
+.item {
+    margin-bottom: 25px;
+}
+
+#titulo {
+    font-size: 40px;
+    color: rgb(255, 117, 24);
+}
+
+#caixa {
+    background-color: rgb(13, 13, 13);
+    color: rgb(255, 117, 24);
+    font-size: 20px;
+    border: 3px solid rgb(255, 117, 24);
+    border-radius: 5px;
+    padding: 1.25rem;
+    height: 35px;
+    width: 450px;
+}
+
+#botao {
+    background-color: rgb(139, 0, 0);
+    color: rgb(127, 255, 0);
+    text-align: center;
+    font-size: 18px;
+    border: 3px rgb(13, 13, 13);
+    border-radius: 7px;
+    height: 35px;
+    width: 200px;
+}
+
+#botao:hover {
+    background-color: rgb(127, 255, 0);
+    color: rgb(139, 0, 0);
+    cursor: pointer;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    background-color: rgb(13, 13, 13);
+    color: rgb(255, 117, 24);
+    font-size: 20px;
+    list-style: none;
+    border: 3px solid rgb(255, 117, 24);
+    border-radius: 7px;
+    margin-bottom: 10px;
+    padding: 1.25rem;
+    height: 35px;
+    width: 450px;
+}
+
+.imagem {
+    width: 1rem;
+    height: 1rem;
+    cursor: pointer;
+    opacity: 0;
+    animation: desaparecerImagem 0.4s ease-out forwards;
+}
+
+#lista li:hover .imagem {
+    animation: aparecerImagem 0.6s ease-in-out forwards;
+}
+
+.concluido {
+    text-decoration: line-through;
+    text-decoration-thickness: 3px;
+    text-decoration-color: rgb(255, 117, 24); 
+}
+
+@keyframes aparecerImagem {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes desaparecerImagem {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+}
