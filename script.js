@@ -62,8 +62,8 @@ function renderizarTarefa(tarefa) {
     input.focus();
 
     input.addEventListener("blur", salvar);
-    input.addEventListener("keydown", (e) => {
-      if (e.key === "Enter") input.blur();
+    input.addEventListener("keydown", (event) => {
+      if (event.key === "Enter") input.blur();
     });
 
     function salvar() {
@@ -98,5 +98,3 @@ function obterTarefas() {
 function salvarTarefas(tarefas) {
   localStorage.setItem("tarefas", JSON.stringify(tarefas));
 }
-
-function editarTarefa() {}
